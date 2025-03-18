@@ -1,0 +1,30 @@
+[project]
+name = "doordash-scraper"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Mrudul Suresh", email = "mail2mrudul@gmail.com" }
+]
+dependencies = [
+    "scrapybara>=2.4.1",
+    "undetected-playwright-patch>=1.40.0.post1700587210000",
+    "playwright>=1.50.0",
+    "dotenv>=0.9.9",
+    "python-dotenv>=1.0.1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/doordash_scraper"]
